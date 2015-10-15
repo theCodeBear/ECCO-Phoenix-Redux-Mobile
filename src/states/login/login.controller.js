@@ -39,7 +39,7 @@ function LoginCtrl($scope, $state, $interval, User) {
 
 
 
-// FUNCTION DELCARATIONS
+// FUNCTION DEFINITIONS
 
   function enterAsGuest() {
     User.storeAsGuest();

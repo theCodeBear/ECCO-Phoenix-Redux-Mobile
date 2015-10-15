@@ -4,9 +4,9 @@ angular.module('ecco')
 
 .controller('EventCtrl', EventCtrl);
 
-EventCtrl.$inject = [];
+EventCtrl.$inject = ['$stateParams', 'Event'];
 
-function EventCtrl() {
+function EventCtrl($stateParams, Event) {
 
   let vmEvent = this;
 
@@ -14,7 +14,7 @@ function EventCtrl() {
 
 
 // VIEW-MODEL (SCOPE) VARIABLES
-
+  vmEvent.event = Event.show($stateParams.eventId);
 
 // FUNCTION ASSIGNMENTS
 
@@ -22,10 +22,7 @@ function EventCtrl() {
 // CONTROLLER EXECUTION
 
 
-
-
-// FUNCTION DELCARATIONS
-
+// FUNCTION DEFINITIONS
 
 
 }

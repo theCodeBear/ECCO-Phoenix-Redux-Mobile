@@ -1,5 +1,66 @@
 <ion-view view-title="Event">
   <ion-content>
-    <h1>Event</h1>
+    <!-- <h1 class='text-center'>{{vmEvent.event.title}}</h1>
+    <p> {{vmEvent.event.description}} </p>
+    <div class='col col-100'>
+      <img ng-src='{{vmEvent.event.photo}}' alt='Event Photo'>
+    </div> -->
+
+
+    <div class="list card">
+      <div class="item item-avatar">
+        <!-- <img ng-src="this is a tiny photo"> -->
+        <h2>{{vmEvent.event.title}}</h2>
+        <p>
+          {{vmEvent.event.dateStart}} {{vmEvent.event.timeStart}} - {{vmEvent.event.dateEnd}} {{ vmEvent.event.timeEnd}}
+        </p>
+        <p class='left'>
+          {{vmEvent.event.type}}
+        </p>
+        <p class='right'>
+          {{vmEvent.event.twitterHash}}
+        </p>
+      </div>
+
+      <div class="item item-body">
+        <img class="full-image" ng-src="{{vmEvent.event.photo}}">
+        <p class='text-center'>
+          {{vmEvent.event.description}}
+        </p>
+        <div>
+          <i class='icon ion-android-pin' style='font-size:2em;'></i>
+          <p class='event-address'>
+            {{vmEvent.event.streetAddress}}<br>
+            {{vmEvent.event.city}}, {{vmEvent.event.state}} {{vmEvent.event.zip}}
+          </p>
+        </div>
+        <div class='small-margin-top'>
+          <a ng-href='{{vmEvent.event.website}}'>
+            {{vmEvent.event.website}}
+          </a>
+        </div>
+        <p>
+          <a href="#" class="subdued">{{vmEvent.event.peopleGoing}} Going</a>
+          <a href="#" class="subdued">5 Comments</a>
+        </p>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="#">
+          <i class="icon ion-eye"></i>
+          Watch
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-chatbox"></i>
+          Chat
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-person-add"></i>
+          Attend
+        </a>
+      </div>
+
+    </div>
+
   </ion-content>
 </ion-view>
