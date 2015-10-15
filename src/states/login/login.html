@@ -1,11 +1,21 @@
 <ion-view title="Login">
   <ion-content class="padding">
-    <h1>LOGIN PAGE</h1>
 
-    {{ vmLogin.blah }} <br>
+    <div class='text-center'>
+      <img src='img/ECCOlogofinal.svg' width='200'>
+    </div>
 
-    <a ui-sref='app.events'>Go to app</a>
+    <div class='text-center motto'>
+      {{ vmLogin.motto }}
+    </div>
 
+    <div class='text-center fb-login'>
+      <img src='img/fbLogin.png' ui-sref='app.events' alt='Facebook Login'>
+    </div>
+
+    <div class='text-center guest-login' ng-click='vmLogin.enterAsGuest()'>
+      Enter as Guest
+    </div>
 
   </ion-content>
 </ion-view>
