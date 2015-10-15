@@ -4,8 +4,10 @@ angular.module('ecco')
 
 .controller('AccountCtrl', AccountCtrl);
 
-AccountCtrl.$inject = ['$scope'];
+AccountCtrl.$inject = [];
 
-function AccountCtrl($scope) {
+function AccountCtrl() {
+
+  let vmAccount = this;
 
 }

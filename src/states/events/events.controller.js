@@ -4,8 +4,10 @@ angular.module('ecco')
 
 .controller('EventsCtrl', EventsCtrl);
 
-EventsCtrl.$inject = ['$scope'];
+EventsCtrl.$inject = [];
 
-function EventsCtrl($scope) {
+function EventsCtrl() {
+
+  let vmEvents = this;
 
 }

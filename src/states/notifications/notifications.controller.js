@@ -4,8 +4,10 @@ angular.module('ecco')
 
 .controller('NotificationsCtrl', NotificationsCtrl);
 
-NotificationsCtrl.$inject = ['$scope'];
+NotificationsCtrl.$inject = [];
 
-function NotificationsCtrl($scope) {
+function NotificationsCtrl() {
+
+  let vmNotifs = this;
 
 }

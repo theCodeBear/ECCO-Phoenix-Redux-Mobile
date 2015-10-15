@@ -4,8 +4,10 @@ angular.module('ecco')
 
 .controller('ChatsCtrl', ChatsCtrl);
 
-ChatsCtrl.$inject = ['$scope'];
+ChatsCtrl.$inject = [];
 
-function ChatsCtrl($scope) {
+function ChatsCtrl() {
+
+  let vmChats = this;
 
 }

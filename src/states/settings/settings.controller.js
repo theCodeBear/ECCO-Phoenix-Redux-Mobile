@@ -4,8 +4,10 @@ angular.module('ecco')
 
 .controller('SettingsCtrl', SettingsCtrl);
 
-SettingsCtrl.$inject = ['$scope'];
+SettingsCtrl.$inject = [];
 
-function SettingsCtrl($scope) {
+function SettingsCtrl() {
+
+  let vmSettings = this;
 
 }

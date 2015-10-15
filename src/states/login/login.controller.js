@@ -4,10 +4,12 @@ angular.module('ecco')
 
 .controller('LoginCtrl', LoginCtrl);
 
-LoginCtrl.$inject = ['$scope'];
+LoginCtrl.$inject = [];
 
-function LoginCtrl($scope) {
+function LoginCtrl() {
 
-  $scope.blah = 'toddie';
+  let vmLogin = this;
+
+  vmLogin.blah = 'toddie';
   
 }

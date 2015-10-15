@@ -30,14 +30,14 @@ angular.module('ecco', ['ionic'])
   .state('login', {
     url: '/login',
     templateUrl: 'states/login/login.html',
-    controller: 'LoginCtrl'
+    controller: 'LoginCtrl as vmLogin'
   })
 
   .state('app', {
     url: '/app',
     abstract: true,
     templateUrl: 'states/menu/menu.html',
-    controller: 'MenuCtrl'
+    controller: 'MenuCtrl as vmMenu'
   })
 
   .state('app.events', {
@@ -45,7 +45,7 @@ angular.module('ecco', ['ionic'])
     views: {
       'menuContent': {
         templateUrl: 'states/events/events.html',
-        controller: 'EventsCtrl'
+        controller: 'EventsCtrl as vmEvents'
       }
     }
   })
@@ -55,7 +55,7 @@ angular.module('ecco', ['ionic'])
       views: {
         'menuContent': {
           templateUrl: 'states/eventsAttended/eventsAttended.html',
-          controller: 'EventsAttendedCtrl'
+          controller: 'EventsAttendedCtrl as vmAttended'
         }
       }
     })
@@ -64,7 +64,7 @@ angular.module('ecco', ['ionic'])
       views: {
         'menuContent': {
           templateUrl: 'states/eventsCreated/eventsCreated.html',
-          controller: 'EventsCreatedCtrl'
+          controller: 'EventsCreatedCtrl as vmCreated'
         }
       }
     })
@@ -74,7 +74,7 @@ angular.module('ecco', ['ionic'])
     views: {
       'menuContent': {
         templateUrl: 'states/chats/chats.html',
-        controller: 'ChatsCtrl'
+        controller: 'ChatsCtrl as vmChats'
       }
     }
   })
@@ -84,7 +84,7 @@ angular.module('ecco', ['ionic'])
     views: {
       'menuContent': {
         templateUrl: 'states/settings/settings.html',
-        controller: 'SettingsCtrl'
+        controller: 'SettingsCtrl as vmSettings'
       }
     }
   })
@@ -94,7 +94,7 @@ angular.module('ecco', ['ionic'])
     views: {
       'menuContent': {
         templateUrl: 'states/account/account.html',
-        controller: 'AccountCtrl'
+        controller: 'AccountCtrl as vmAccount'
       }
     }
   })
@@ -104,7 +104,7 @@ angular.module('ecco', ['ionic'])
     views: {
       'menuContent': {
         templateUrl: 'states/notifications/notifications.html',
-        controller: 'NotificationsCtrl'
+        controller: 'NotificationsCtrl as vmNotifs'
       }
     }
   });

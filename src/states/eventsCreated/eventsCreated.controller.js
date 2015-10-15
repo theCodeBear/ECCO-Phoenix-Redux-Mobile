@@ -4,8 +4,10 @@ angular.module('ecco')
 
 .controller('EventsCreatedCtrl', EventsCreatedCtrl);
 
-EventsCreatedCtrl.$inject = ['$scope'];
+EventsCreatedCtrl.$inject = [];
 
-function EventsCreatedCtrl($scope) {
+function EventsCreatedCtrl() {
+
+  let vmCreated = this;
 
 }

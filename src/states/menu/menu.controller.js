@@ -4,9 +4,9 @@ angular.module('ecco')
 
 .controller('MenuCtrl', MenuCtrl);
 
-MenuCtrl.$inject = ['$scope'];
+MenuCtrl.$inject = [];
 
-function MenuCtrl($scope) {
+function MenuCtrl() {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -15,4 +15,6 @@ function MenuCtrl($scope) {
 
   //$scope.$on('$ionicView.enter', function(e) {
   //});
+
+  let vmMenu = this;
 }
