@@ -50,6 +50,16 @@ angular.module('ecco', ['ionic'])
     }
   })
 
+  .state('app.event', {
+    url: '/events/:eventId',
+    views: {
+      'menuContent': {
+        templateUrl: 'states/event/event.html',
+        controller: 'EventCtrl as vmEvent'
+      }
+    }
+  })
+
   .state('app.eventsAttended', {
       url: '/eventsAttended',
       views: {
