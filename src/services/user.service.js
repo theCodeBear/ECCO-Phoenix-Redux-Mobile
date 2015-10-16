@@ -9,10 +9,13 @@ User.$inject = ['$http'];
 function User($http) {
 
   let user = {};
+  let guest = false;
 
   let service = {
     get: get,
-    storeAsGuest: storeAsGuest
+    storeAsGuest: storeAsGuest,
+    resetGuest: resetGuest,
+    isUserGuest: isUserGuest
   };
 
   return service;
@@ -23,7 +26,15 @@ function User($http) {
   }
 
   function storeAsGuest() {
-    user = 'guest';
+    guest = true;
+  }
+
+  function resetGuest() {
+    guest = false;
+  }
+
+  function isUserGuest() {
+    return guest;
   }
 
 }

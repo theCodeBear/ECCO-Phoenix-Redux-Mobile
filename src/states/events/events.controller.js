@@ -4,9 +4,9 @@ angular.module('ecco')
 
 .controller('EventsCtrl', EventsCtrl);
 
-EventsCtrl.$inject = ['Event'];
+EventsCtrl.$inject = ['$scope', 'Event', 'User'];
 
-function EventsCtrl(Event) {
+function EventsCtrl($scope, Event, User) {
 
   let vmEvents = this;
 
@@ -16,13 +16,19 @@ function EventsCtrl(Event) {
 // VIEW-MODEL (SCOPE) VARIABLES
   vmEvents.fakeEventsData = Event.get();
 
+
 // FUNCTION ASSIGNMENTS
 
 
 // CONTROLLER EXECUTION
-
+$scope.$on('$ionicView.enter', function(e) {
+  vmEvents.userNotGuest = userNotGuest();
+});
 
 
 // FUNCTION DEFINITIONS
+  function userNotGuest() {
+    return !User.isUserGuest();
+  }
 
 }

@@ -60,6 +60,16 @@ angular.module('ecco', ['ionic'])
     }
   })
 
+  .state('app.createEvent', {
+    url: '/createEvent',
+    views: {
+      'menuContent': {
+        templateUrl: 'states/createEvent/createEvent.html',
+        controller: 'CreateEventCtrl as vmCreateEv'
+      }
+    }
+  })
+
   .state('app.eventsAttended', {
       url: '/eventsAttended',
       views: {

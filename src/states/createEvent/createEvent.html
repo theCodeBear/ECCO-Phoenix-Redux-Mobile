@@ -1,0 +1,43 @@
+<ion-view view-title="Create Event">
+  <ion-content>
+    <form ng-submit='vmCreateEv.createEvent(vmCreateEv.event)'>
+      <div class="list list-inset">
+        <label class="item item-input">
+          <input type='text' ng-model='vmCreateEv.event.title' placeholder='Title'>
+        </label>
+        <label class="item item-input">
+          <input type="text" ng-model='vmCreateEv.event.type' placeholder="Type (i.e. Music, Outdoors, etc)">
+        </label>
+        <label class="item item-input">
+          <input type="text" ng-model='vmCreateEv.event.streetAddress' placeholder="Street Address">
+        </label>
+        <label class="item item-input">
+          <input type="text" ng-model='vmCreateEv.event.city' placeholder="City">
+        </label>
+        <label class="item item-input">
+          <input type="text" ng-model='vmCreateEv.event.state' placeholder="State">
+        </label>
+        <label class="item item-input">
+          <input type="text" ng-model='vmCreateEv.event.zip' placeholder="Zipcode">
+        </label>
+        <label class="item item-input">
+          <input type="text" ng-model='vmCreateEv.event.description' placeholder="Description">
+        </label>
+        <label class="item item-input">
+          <input type="text" ng-model='vmCreateEv.event.twitterHash' placeholder="Twitter Hashtag">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Start Date</span>
+          <input type="date" ng-model='vmCreateEv.event.dateStart' ng-change='vmCreateEv.checkDates()'>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">End Date</span>
+          <input type="date" ng-model='vmCreateEv.event.dateEnd' ng-change='vmCreateEv.checkDates()'>
+        </label>
+      </div>
+      <div class='text-center'>
+        <button type='submit' class='button button-positive button-large'>Create Event</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

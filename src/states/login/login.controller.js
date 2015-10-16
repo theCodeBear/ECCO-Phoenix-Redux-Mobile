@@ -26,6 +26,7 @@ function LoginCtrl($scope, $state, $interval, User) {
 
   // starts motto looping when user enters view
   $scope.$on('$ionicView.enter', function(e) {
+    User.resetGuest();
     vmLogin.loopMottos();  
   });
 
@@ -43,7 +44,6 @@ function LoginCtrl($scope, $state, $interval, User) {
 
   function enterAsGuest() {
     User.storeAsGuest();
-    console.log('user:', User.get());
     $state.go('app.events');
   }
 

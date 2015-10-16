@@ -1,6 +1,8 @@
 <ion-view view-title="Events">
   <ion-content>
-    <h1>Events</h1>
+    <div class='text-center col col-80 col-offset-10 no-vert-padding' ng-if='vmEvents.userNotGuest'>
+      <button type='button' class='button button-balanced button-clear button-block one-half-font' ui-sref='app.createEvent'>Create Event</button>
+    </div>
 
     <div class="list">
       <a class="item item-thumbnail-left" ng-repeat='event in vmEvents.fakeEventsData' ui-sref="app.event({eventId: event._id })">
